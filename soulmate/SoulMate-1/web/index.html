@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulMate - Chat App</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="login-screen" class="screen active">
+            <div class="login-container">
+                <h1>SoulMate</h1>
+                <div class="tab-buttons">
+                    <button id="login-tab" class="tab active">Login</button>
+                    <button id="register-tab" class="tab">Register</button>
+                </div>
+                <form id="login-form" class="auth-form active">
+                    <input type="email" id="login-email" placeholder="Email" required>
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <form id="register-form" class="auth-form">
+                    <input type="email" id="register-email" placeholder="Email" required>
+                    <input type="password" id="register-password" placeholder="Password" required>
+                    <button type="submit">Register</button>
+                </form>
+                <div id="auth-message"></div>
+            </div>
+        </div>
+
+        <div id="chat-screen" class="screen">
+            <div class="chat-container">
+                <div class="chat-sidebar">
+                    <div class="user-profile">
+                        <img id="user-avatar" src="" alt="Avatar">
+                        <span id="user-email"></span>
+                    </div>
+                    <div class="chat-list" id="chat-list">
+                        <!-- Chat rooms will be populated here -->
+                    </div>
+                    <button id="new-chat-btn">New Chat</button>
+                </div>
+                <div class="chat-main">
+                    <div class="chat-header" id="chat-header">
+                        <h2 id="chat-title">Select a chat</h2>
+                    </div>
+                    <div class="chat-messages" id="chat-messages">
+                        <!-- Messages will be populated here -->
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="message-input" placeholder="Type a message..." disabled>
+                        <button id="send-btn" disabled>Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="static/js/auth.js"></script>
+    <script src="static/js/chat.js"></script>
+    <script src="static/js/websocket.js"></script>
+</body>
+</html>
